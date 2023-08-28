@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: flex;
+        flex-direction: row;
+        border: 2px solid white;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 330px;
+        font-size: large;
+    }
+</style>
+<body>
+    <div id="container"><span id="hours">00</span> :<span id="min">00</span> :<span id="sec">00</span></div>
+
+    <script>
+        let div = document.getElementById('container')
+        let date = new Date()
+     
+     
+        let hours = document.getElementById('hours')
+        let min = document.getElementById('min')
+        let sec = document.getElementById('sec')
+     hours.innerHTML = date.getHours() ;
+         min.innerHTML = date.getMinutes() ;
+         sec.innerHTML = date.getSeconds() ;
+
+    
+        let hexcolor =  `#${hours}${min}${sec}`
+
+        let body = document.body
+        body.style.backgroundColor = hexcolor ;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="filterinput">
+    <h3>Results :</h3>
+    <ul id="itemlist">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Tailwind CSS</li>
+    <li>Javascript</li></ul>
+
+
+
+    <script>
+
+        let filterinput =  document.getElementById('filterinput')
+        let itemlist =   document
+               .getElementById('itemlist')
+               .getElementsByTagName('li')
+
+
+               filterinput.addEventListener('input' , function(){
+            const  filtervalue = filterinput.value.toLowercase() ;
+
+            for(i=o ; i< itemlist.length ; i++ ){
+                const itemtext = itemlist[i].innerText().toLowercase()
+                if(itemtext.includes(filtervalue)){
+                    itemlist.style.display = "block"
+                }
+                else{
+                    itemlist.style.display = "none"
+                }
+            }
+
+               })
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading1">The Image is Visible</h1>
+    <button id="btn" onclick="toggel()"  style="height: 30px;">Toggle Image</button> <br>
+    <img id="img1" src="WhatsApp Image 2023-08-24 at 19.31.57.jpg" alt="" style="width: 450px; height: 340px; margin-left: 0px; margin-top: 30px;" >
+</body>
+<script>
+    let body =  document.body ;
+    let image = document.getElementById('img1')
+    let heading1 = document.getElementById('heading1')
+    const togglebutton = document.getElementById('btn')
+
+function toggel(){
+if(image.style.opacity == 0){
+  image.style.opacity = 100;
+   heading1.textContent = " The Image is  Visible"
+   
+
+}
+else{ 
+    image.style.opacity = 0 ;
+    heading1.textContent = "The Image is not Visible" ;
+    
+}
+
+}
+</script>
+</html>
